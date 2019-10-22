@@ -53,7 +53,7 @@ class UserAuthentication {
                                 .then(user => {
                                     const payload = { id: user._id }
 
-                                    jwt.sign(payload, keys.secret, { expiresIn: 86400 }, (err, token) => { // Expires in a day
+                                    jwt.sign(payload, keys.jwt.privateKey, { expiresIn: 86400 }, (err, token) => { // Expires in a day
                                         if (err) throw err
                                         res.json({ success: true, token: `Bearer ${token}` })
                                     })
@@ -99,7 +99,7 @@ class UserAuthentication {
 
                             const payload = { id: user._id }
 
-                            jwt.sign(payload, keys.secret, { expiresIn: 86400 }, (err, token) => { // Expires in a day
+                            jwt.sign(payload, keys.jwt.privateKey, { expiresIn: 86400 }, (err, token) => { // Expires in a day
                                 if (err) throw err
                                 res.json({ success: true, token: `Bearer ${token}` })
                             })
