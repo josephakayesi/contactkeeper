@@ -1,8 +1,0 @@
-# node_modules
-node_modules/
-
-# environment variables
-.env
-
-# lock file
-package-lock.json

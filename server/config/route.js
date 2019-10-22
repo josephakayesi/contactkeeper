@@ -1,8 +1,8 @@
 class Route {
     constructor() {
         this.users = require('../routes/api/users')
-        this.contacts = require('../routes/api/contacts')
-        this.auth = require('../routes/api/auth')
+        this.contacts = require('../routes/api/contacts').getRouter()
+        this.auth = require('../routes/api/auth').getRouter()
     }
 
     getRoute = () => {

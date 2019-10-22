@@ -1,0 +1,21 @@
+# node_modules
+/server/node_modules/
+
+# environment variables
+/server/.env
+
+# lock file
+/server/package-lock.json
+
+# client
+/client/build
+/client/.env.local
+/client/env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
